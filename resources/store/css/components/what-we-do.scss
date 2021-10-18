@@ -1,0 +1,126 @@
+.wwd {
+    padding-top: 6.25rem;
+    position: relative;
+    overflow: hidden;
+
+    &__circle1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 500px;
+        height: 500px;
+        background-color: var(--color-black);
+        opacity: 0.06;
+        border-radius: 50%;
+        position: absolute;
+        top: -50px;
+
+        &__inner {
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            background-color: var(--color-white);
+        }
+    }
+
+    .container {
+        display: flex;
+        gap: 100px;
+    }
+
+    @include breakpoint(lg) {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    img {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+    }
+
+    &-left {
+        flex: 1;
+
+        h2 {
+            font-size: 4.375rem;
+            line-height: 1.4;
+            color: var(--color-black);
+
+            @include breakpoint(max) {
+                font-size: 3.5rem;
+            }
+
+            @include breakpoint(xl) {
+                font-size: 3rem;
+            }
+
+            @include breakpoint(lg) {
+                font-size: 2.6rem;
+            }
+
+            @include breakpoint(lg) {
+                font-size: 2.2rem;
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin-bottom: 50px;
+            color: var(--color-black);
+
+            @include breakpoint(max) {
+                font-size: 1.2rem;
+            }
+        }
+
+        img {
+            height: 380px;
+
+            @include breakpoint(max) {
+                height: 248px;
+            }
+
+            @include breakpoint(xl) {
+                height: 136px;
+            }
+
+            @include breakpoint(lg) {
+                height: 450px;
+            }
+
+            @include breakpoint(sm) {
+                height: 250px;
+            }
+        }
+    }
+
+    &-right {
+        flex: 1;
+        height: 500px;
+
+        // küçük ekranda son 3 resim gidiyor
+        @include breakpoint(lg) {
+            display: none;
+        }
+
+        div {
+            display: flex;
+            margin-top: 20px;
+            gap: 20px;
+
+            @include breakpoint(lg) {
+                flex-direction: column;
+            }
+
+            img {
+                width: calc(50% - 10px);
+
+                @include breakpoint(lg) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

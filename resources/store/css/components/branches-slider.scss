@@ -1,0 +1,212 @@
+.branches-slider {
+    margin-top: 400px;
+    padding-top: 100px;
+    padding-bottom: 160px;
+    position: relative;
+    overflow: hidden;
+
+    .text-effect {
+        position: absolute;
+        top: -30px;
+        font-weight: bold;
+        font-size: 240px;
+        white-space: nowrap;
+        opacity: 0.06;
+        color: var(--color-black);
+
+        @include breakpoint(max) {
+            font-size: 180px;
+            top: -16px;
+        }
+
+        @include breakpoint(xl) {
+            font-size: 160px;
+            top: -16px;
+        }
+
+        @include breakpoint(lg) {
+            font-size: 140px;
+            top: -16px;
+        }
+
+        @include breakpoint(md) {
+            font-size: 100px;
+            top: 30px;
+            left: -10px;
+        }
+    }
+
+    h2 {
+        font-size: 4.375rem;
+        color: var(--color-black);
+
+        @include breakpoint(max) {
+            font-size: 3.5rem;
+        }
+
+        @include breakpoint(xl) {
+            font-size: 3rem;
+        }
+
+        @include breakpoint(lg) {
+            font-size: 2.6rem;
+        }
+
+        @include breakpoint(lg) {
+            font-size: 2.2rem;
+        }
+    }
+
+    p {
+        font-size: 2rem;
+        color: var(--color-black);
+
+        @include breakpoint(max) {
+            font-size: 1.2rem;
+        }
+    }
+
+    .splide {
+        margin-top: 60px;
+
+        &__pagination {
+            bottom: -40px;
+
+            &__page {
+                width: 16px;
+                height: 16px;
+                background: var(--color-accent);
+                transition: all 0.3s ease-in-out;
+
+                &.is-active {
+                    background: var(--color-primary);
+                    transform: none;
+                    width: 50px;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+
+    .branch-slide {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+
+        @include breakpoint(lg) {
+            flex-direction: column;
+
+            .branch-slide-content {
+                width: auto;
+            }
+        }
+
+        &-image {
+            flex: 1.5;
+            width: 100%;
+            max-height: 500px;
+
+            @include breakpoint(max) {
+                max-height: 433px;
+            }
+
+            @include breakpoint(xl) {
+                max-height: 350px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-content {
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 50px;
+            color: var(--color-black);
+            background-color: var(--color-gray-light);
+
+            @include breakpoint(md) {
+                padding: 40px;
+            }
+
+            @include breakpoint(sm) {
+                padding: 30px;
+            }
+
+            &-top {
+                h3 {
+                    font-size: 2.5rem;
+                    margin-bottom: 30px;
+
+                    @include breakpoint(max) {
+                        font-size: 2.3rem;
+                    }
+
+                    @include breakpoint(xl) {
+                        font-size: 2.1rem;
+                    }
+
+                    @include breakpoint(xl) {
+                        font-size: 2.1rem;
+                    }
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    margin-bottom: 30px;
+
+                    @include breakpoint(max) {
+                        font-size: 20px;
+                    }
+
+                    @include breakpoint(xl) {
+                        font-size: 18px;
+                    }
+
+                    @include breakpoint(xl) {
+                        font-size: 1rem;
+                    }
+                }
+
+                div {
+                    font-size: 1.5rem;
+                    margin-bottom: 20px;
+
+                    @include breakpoint(max) {
+                        font-size: 20px;
+                    }
+
+                    @include breakpoint(xl) {
+                        font-size: 18px;
+                    }
+
+                    @include breakpoint(xl) {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            &-actions {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+
+                @include breakpoint(sm) {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                .btn {
+                    flex: 1;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

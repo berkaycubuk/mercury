@@ -1,0 +1,53 @@
+.loading {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 9999999999999;
+
+    &.active {
+        display: block;
+    }
+
+    &-thing {
+        position: fixed;
+        left: 48%;
+        top: 48%;
+        width: 50px;
+        height: 50px;
+        background-color: var(--color-white);
+        border-radius: 50%;
+        transform-origin: center;
+        animation: loading 2s infinite;
+
+        &-secondary {
+            opacity: 0;
+            animation: loading2 2s infinite;
+        }
+    }
+}
+
+@keyframes loading {
+    0% {
+    }
+    50% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    100% {
+    }
+}
+
+@keyframes loading2 {
+    0% {
+    }
+    50% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+    }
+}

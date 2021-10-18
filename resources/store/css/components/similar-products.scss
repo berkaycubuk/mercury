@@ -1,0 +1,30 @@
+.similar-products {
+    margin-top: 100px;
+    color: var(--color-black);
+
+    .splide {
+        margin-top: 10px;
+
+        &__pagination {
+            bottom: -80px;
+
+            &__page {
+                width: 16px;
+                height: 16px;
+                background: var(--color-accent);
+                transition: all 0.3s ease-in-out;
+
+                &.is-active {
+                    background: var(--color-primary);
+                    transform: none;
+                    width: 50px;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .splide__slide {
+            padding: 10px;
+        }
+    }
+}

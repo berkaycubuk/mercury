@@ -1,0 +1,21 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    
+    .product {
+        margin: 20px;
+        width: calc((100% / 4) - 60px);
+
+        @include breakpoint(xl) {
+            width: calc((100% / 3) - 40px);
+        }
+
+        @include breakpoint(lg) {
+            width: calc((100% / 2) - 40px);
+        }
+
+        @include breakpoint(sm) {
+            width: 100%;
+        }
+    }
+}

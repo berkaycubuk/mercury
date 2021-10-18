@@ -1,0 +1,40 @@
+.action-holder {
+    position: fixed;
+    left: 0;
+    bottom: 18vh;
+    user-select: none;
+
+    z-index: 99999999;
+
+    .darkmode-action {
+        padding: 10px;
+        cursor: pointer;
+        color: var(--color-black);
+        background-color: var(--color-white);
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border: 3px solid var(--color-black);
+        border-left: none;
+        transition: all 0.2s;
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+
+        svg {
+            width: 22px;
+            height: 22px;
+            transform: scale(1.2);
+            transition: all 0.2s;
+        }
+
+        &:hover {
+            background-color: var(--color-black);
+
+            svg {
+                color: var(--color-white);
+            }
+        }
+    }
+}

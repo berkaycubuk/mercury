@@ -1,0 +1,17 @@
+.about-us-block {
+    display: flex;
+    color: var(--color-black);
+    gap: 20px;
+
+    @include breakpoint(md) {
+        flex-direction: column;
+    }
+
+    div {
+        flex: 1;
+    }
+
+    img {
+        width: 100%;
+    }
+}

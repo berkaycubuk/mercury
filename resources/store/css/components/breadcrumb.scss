@@ -1,0 +1,42 @@
+.breadcrumb {
+    margin: 2.5rem auto;
+
+    ul {
+        display: flex;
+
+        li {
+            font-size: 1rem;
+            margin-right: 0.5rem;
+            position: relative;
+
+            @include breakpoint(sm) {
+                font-size: 0.8rem;
+            }
+
+            a {
+                color: var(--color-black);
+            }
+
+            img {
+                transform: rotate(-90deg);
+                height: 0.625rem;
+                width: 0.625rem;
+            }
+
+            &::after {
+                content: ">";
+                display: inline-block;
+                margin-left: 10px;
+                color: var(--color-black);
+            }
+
+            &.active {
+                color: var(--color-gray-dark);
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

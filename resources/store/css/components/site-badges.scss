@@ -1,0 +1,93 @@
+.site-badges {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 180px;
+
+    .site-badge {
+        width: 340px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 30px 20px;
+        color: var(--color-black);
+        background-color: var(--color-gray-light);
+
+        img {
+            width: 60px;
+            height: 60px;
+
+            @include breakpoint(max) {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        svg {
+            width: 60px;
+            height: 60px;
+            fill: var(--color-black);
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: bold;
+
+            @include breakpoint(max) {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-max) {
+    .site-badges {
+        .site-badge {
+            span {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xl) {
+    .site-badges {
+        .site-badge {
+            img {
+                width: 50px;
+                height: 50px;
+            }
+
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-lg) {
+    .site-badges {
+        flex-wrap: wrap;
+
+        .site-badge {
+            width: 43%;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-md) {
+    .site-badges {
+        flex-wrap: wrap;
+
+        .site-badge {
+            width: 100%;
+            justify-content: center;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}

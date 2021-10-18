@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.476" height="22" viewBox="0 0 19.476 22">
+  <g id="person" transform="translate(-2.262 -1)">
+    <circle id="Ellipse_6" data-name="Ellipse 6" cx="5" cy="5" r="5" transform="translate(7 2)" fill="none" stroke="#000" stroke-width="2"/>
+    <path id="Path_3" data-name="Path 3" d="M17,14h.352a3,3,0,0,1,2.977,2.628l.39,3.124A2,2,0,0,1,18.734,22H5.266a2,2,0,0,1-1.985-2.248l.391-3.124A3,3,0,0,1,6.648,14H7" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

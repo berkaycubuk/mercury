@@ -1,0 +1,222 @@
+.oocta {
+    margin-top: 300px;
+    position: relative;
+
+    &__images {
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+
+        @include breakpoint(lg) {
+            display: none;
+        }
+    }
+
+    &-image-bag {
+        position: absolute;
+        right: 100px;
+        width: 200px;
+        transform: rotate(-10deg);
+        top: 460px;
+        filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));
+        
+        @include breakpoint(xl) {
+            right: 60px;
+        }
+    }
+
+    &-image-bread {
+        position: absolute;
+        right: 460px;
+        width: 200px;
+        transform: rotate(40deg);
+        top: 440px;
+        filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));
+        
+        @include breakpoint(max) {
+            top: 460px;
+        }
+        
+        @include breakpoint(xl) {
+            top: 500px;
+        }
+    }
+
+    &-image-cake {
+        position: absolute;
+        right: 80px;
+        width: 150px;
+        transform: rotate(-30deg);
+        top: 20px;
+        filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));
+        
+        @include breakpoint(xl) {
+            top: -50px;
+        }
+    }
+
+    &-image-cake-2 {
+        position: absolute;
+        right: 360px;
+        width: 200px;
+        transform: rotate(10deg);
+        top: 0px;
+        filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));
+        
+        @include breakpoint(max) {
+            top: -100px;
+        }
+        
+        @include breakpoint(xl) {
+            top: -150px;
+        }
+    }
+
+    &-box {
+        width: 70%;
+        padding: 5.625rem;
+        background-color: var(--color-gray-light);
+        position: relative;
+
+        &__dots {
+            position: absolute;
+            top: -25px;
+            left: 0;
+        }
+
+        &__dot-1 {
+            width: 20px;
+            height: 20px;
+            background-color: var(--color-black);
+            border-radius: 50%;
+            opacity: 0.06;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: -25px;
+                width: 20px;
+                height: 20px;
+                background-color: var(--color-black);
+                border-radius: 50%;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: -25px;
+                width: 20px;
+                height: 20px;
+                background-color: var(--color-black);
+                border-radius: 50%;
+            }
+        }
+
+        &__dot-2 {
+            width: 20px;
+            height: 20px;
+            margin: 5px 0;
+            background-color: var(--color-black);
+            border-radius: 50%;
+            opacity: 0.06;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: -25px;
+                width: 20px;
+                height: 20px;
+                background-color: var(--color-black);
+                border-radius: 50%;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: -25px;
+                width: 20px;
+                height: 20px;
+                background-color: var(--color-black);
+                border-radius: 50%;
+            }
+        }
+
+        &__dot-3 {
+            width: 20px;
+            height: 20px;
+            background-color: var(--color-black);
+            border-radius: 50%;
+            opacity: 0.06;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: -25px;
+                width: 20px;
+                height: 20px;
+                background-color: var(--color-black);
+                border-radius: 50%;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: -25px;
+                width: 20px;
+                height: 20px;
+                background-color: var(--color-black);
+                border-radius: 50%;
+            }
+        }
+
+        @include breakpoint(lg) {
+            padding: 0;
+            width: 100%;
+            margin-top: 200px;
+        }
+
+        h2 {
+            font-size: 4.375rem;
+            line-height: 1.4;
+            color: var(--color-black);
+
+            @include breakpoint(max) {
+                font-size: 3.5rem;
+            }
+
+            @include breakpoint(xl) {
+                font-size: 3rem;
+            }
+
+            @include breakpoint(lg) {
+                font-size: 2.6rem;
+                padding-top: 50px;
+                padding-left: 50px;
+            }
+
+            @include breakpoint(lg) {
+                font-size: 2.2rem;
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            color: var(--color-black);
+
+            @include breakpoint(max) {
+                font-size: 1.2rem;
+            }
+
+            @include breakpoint(lg) {
+                padding: 0 50px;
+            }
+        }
+
+        a {
+            margin-top: 3.125rem;
+            margin-bottom: 50px;
+            margin-left: 50px;
+        }
+    }
+}

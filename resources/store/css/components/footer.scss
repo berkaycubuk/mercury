@@ -1,0 +1,260 @@
+.footer {
+    padding-top: 12.5rem;
+    position: relative;
+    margin-top: 100px;
+    overflow: hidden;
+
+    .text-effect {
+        position: absolute;
+        left: 26px;
+        bottom: 50px;
+        font-weight: bold;
+        font-size: 340px;
+        white-space: nowrap;
+        opacity: 0.06;
+        color: var(--color-black);
+        z-index: -1;
+
+        @include breakpoint(max) {
+            font-size: 300px;
+            bottom: 50px;
+        }
+
+        @include breakpoint(xl) {
+            font-size: 160px;
+            bottom: 16px;
+        }
+
+        @include breakpoint(lg) {
+            font-size: 140px;
+            bottom: 16px;
+        }
+
+        @include breakpoint(md) {
+            font-size: 100px;
+            bottom: 30px;
+            left: 10px;
+        }
+    }
+
+    &-decoration {
+        position: absolute;
+        left: -25%;
+        top: 7.5rem;
+        width: 150%;
+        height: 62.5rem;
+        background-color: var(--color-gray-light);
+        transform: rotate(6deg);
+        z-index: -2;
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+
+        &-left {
+            flex: 3;
+            display: flex;
+            gap: 50px;
+
+            @include breakpoint(sm) {
+                flex-direction: column;
+            }
+        }
+
+        &-right {
+            flex: 1;
+
+            h4 {
+                font-size: 1.625rem;
+                font-weight: 600;
+                color: var(--color-black);
+
+                @include breakpoint(max) {
+                    font-size: 1.2rem;
+                }
+            }
+
+            p {
+                font-size: 1.125rem;
+                line-height: 1.6;
+                color: var(--color-black);
+
+                @include breakpoint(max) {
+                    font-size: 1rem;
+                }
+            }
+
+            &-contact {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 2.5rem;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    margin: 0.3125rem 0;
+                    font-size: 1.125rem;
+                    color: var(--color-black);
+
+                    @include breakpoint(max) {
+                        font-size: 1rem;
+                    }
+
+                    img {
+                        margin-right: 0.5rem;
+
+                        @include breakpoint(max) {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    svg {
+                        fill: var(--color-black);
+                        margin-right: 0.5rem;
+
+                        @include breakpoint(max) {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+
+            &-social {
+                display: flex;
+                gap: 0.8rem;
+
+                @include breakpoint(lg) {
+                    gap: 3rem;
+                    justify-content: center;
+                }
+
+                @include breakpoint(xs) {
+                    gap: 2rem;
+                    justify-content: center;
+                }
+
+                a {
+                    img {
+                        @include breakpoint(max) {
+                            width: 28px;
+                            height: 28px;
+                        }
+                    }
+
+                    svg {
+                        width: 28px;
+                        height: 28px;
+                        fill: var(--color-black);
+                    }
+                }
+            }
+        }
+
+        &-block {
+            h5 {
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: var(--color-black);
+
+                @include breakpoint(max) {
+                    font-size: 1.1rem;
+                }
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                margin-top: 1.25rem;
+
+                a {
+                    margin: 0.625rem 0;
+                    font-size: 1.125rem;
+                    color: var(--color-black);
+
+                    @include breakpoint(max) {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+        margin-top: 15rem;
+        margin-bottom: 3.125rem;
+        color: var(--color-black);
+
+        @include breakpoint(max) {
+            font-size: 0.9rem;
+        }
+
+        a {
+            font-weight: 600;
+            color: var(--color-black);
+        }
+
+        @include breakpoint(lg) {
+            align-items: center;
+            margin-top: 4rem;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-max) {
+    .footer {
+    }
+}
+
+@media screen and (max-width: $screen-xl) {
+    .footer {
+        &-content {
+            &-left {
+            }
+
+            &-right {
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-lg) {
+    .footer {
+        &-content {
+            flex-direction: column;
+
+            &-left {
+                flex: 1;
+            }
+
+            &-right {
+                margin-top: 6.25rem;
+                flex: 1;
+
+                &-contact {
+                    margin-top: 1.875rem;
+
+                    a {
+                        font-size: 1.25rem;
+                        margin: 1.25rem 0;
+
+                        img {
+                            margin-right: 0.9375rem;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        &-bottom {
+            flex-direction: column;
+        }
+    }
+}

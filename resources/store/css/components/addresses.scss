@@ -1,0 +1,73 @@
+.addresses {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+
+    @include breakpoint(lg) {
+        flex-direction: column;
+    }
+
+    a.address-block {
+        cursor: pointer;
+    }
+
+    .address-block {
+        width: calc((100% / 4) - 10px);
+        padding: 20px;
+        background-color: var(--color-gray-light);
+        // box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include breakpoint(lg) {
+            width: calc(100% - 40px);
+        }
+
+        &-new {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--color-black);
+        }
+
+        &-name {
+            font-weight: bold;
+            color: var(--color-black);
+        }
+
+        &-person {
+
+            color: var(--color-black);
+        }
+
+        &-address {
+            margin: 0;
+            color: var(--color-black);
+        }
+
+        &-phone {
+
+            color: var(--color-black);
+        }
+
+        &-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a.link {
+                cursor: pointer;
+                color: var(--color-black);
+            }
+
+            a.btn {
+                font-size: 1rem;
+                padding: 12px 16px;
+            }
+        }
+    }
+}

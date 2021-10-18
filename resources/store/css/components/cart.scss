@@ -1,0 +1,278 @@
+.cart {
+    .coupon-box {
+        width: fit-content;
+        padding: 1rem;
+        color: var(--color-black);
+        background-color: var(--color-gray-light);
+    }
+
+    color: var(--color-black);
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 2.5rem;
+
+        @include breakpoint(lg) {
+            flex-direction: column;
+        }
+
+        &-left {
+            flex: 3;
+        }
+
+        &-right {
+            flex: 1;
+        }
+    }
+
+    &-products {
+        padding: 30px;
+        background-color: var(--color-gray-light);
+
+        hr {
+            height: 1px;
+            width: 100%;
+            background-color: #ddd;
+            border: none;
+        }
+    }
+
+    &-product {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoint(sm) {
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        &-image {
+            width: 6.25rem;
+            height: 6.25rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            justify-content: center;
+        }
+
+        &-details {
+            display: flex;
+            gap: 1.25rem;
+
+            span {
+                color: var(--color-black);
+            }
+
+            a {
+                cursor: pointer;
+                font-size: 0.875rem;
+                color: var(--color-gray-dark);
+            }
+        }
+
+        &-amount {
+            width: 7.5rem;
+            height: 4.375rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--color-white);
+
+            @include breakpoint(sm) {
+                width: 100%;
+            }
+
+            &-increment {
+                cursor: pointer;
+                padding: 1.125rem;
+                color: var(--color-black);
+            }
+
+            &-decrease {
+                cursor: pointer;
+                padding: 1.125rem;
+                color: var(--color-black);
+            }
+
+            &-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &-number {
+                width: 1.875rem;
+                font-size: 1.25rem;
+                font-weight: normal;
+                color: var(--color-black);
+                border: none;
+                outline: none;
+                text-align: center;
+                background-color: var(--color-white);
+            }
+
+            &-text {
+                margin: 0;
+                margin-top: 0.3125rem;
+                font-size: 0.875rem;
+                font-weight: normal;
+                color: var(--color-gray-dark);
+            }
+        }
+
+        &-price {
+            span {
+                font-size: 1.25rem;
+                font-weight: bold;
+                color: var(--color-black);
+            }
+        }
+    }
+
+    &-actions {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        margin-top: 1.875rem;
+
+        @include breakpoint(md) {
+            flex-direction: column;
+        }
+
+        button, a {
+            font-size: 1.125rem;
+
+            @include breakpoint(max) {
+                font-size: 1rem;
+            }
+
+            @include breakpoint(md) {
+                width: 100%;
+            }
+        }
+
+        a {
+            @include breakpoint(md) {
+                padding: 0;
+                text-align: center;
+                padding: 1rem 0;
+            }
+        }
+    }
+
+    &-summary {
+        padding: 1.875rem;
+        background-color: var(--color-gray-light);
+
+        h2 {
+            margin-bottom: 2.4375rem;
+            color: var(--color-black);
+        }
+
+        &-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0.875rem 0;
+            color: var(--color-black);
+
+            &-name {
+            }
+
+            &-amount {
+                font-weight: 600;
+            }
+        }
+
+        hr {
+            width: 100%;
+            height: 0.0625rem;
+            background-color: #ddd;
+            border: none;
+        }
+
+        a {
+            display: block;
+            margin-top: 2.0625rem;
+            text-align: center;
+        }
+
+        &-coupons {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin: 1.5rem 0;
+            
+            .coupon {
+                padding: 0.8rem;
+                border: 3px dashed var(--color-black);
+
+                &__head {
+                    position: relative;
+
+                    &__delete {
+                        position: absolute;
+                        top: -28px;
+                        right: 4px;
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            width: 16px;
+                            height: 3px;
+                            background-color: var(--color-black);
+                            transform: rotate(45deg);
+                        }    
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            width: 16px;
+                            height: 3px;
+                            background-color: var(--color-black);
+                            transform: rotate(-45deg);
+                        }    
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+
+                    &__title {
+                        margin-bottom: 0.5rem;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                    }
+
+                    &__discount {
+
+                    }
+                }
+
+                &__body {
+                    &__description {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}

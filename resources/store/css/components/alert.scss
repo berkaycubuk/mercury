@@ -1,0 +1,18 @@
+.alert {
+    padding: 16px;
+
+    &-danger {
+        color: #ff4646;
+        background-color: #ffeeee;
+    }
+
+    &-info {
+        color: #0f67ff;
+        background-color: #e7efff;
+    }
+
+    &-success {
+        color: #049509;
+        background-color: #ebffeb;
+    }
+}

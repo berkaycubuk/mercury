@@ -1,0 +1,89 @@
+.account-page {
+    color: var(--color-black);
+    display: flex;
+    gap: 50px;
+
+    @include breakpoint(lg) {
+        flex-direction: column;
+    }
+
+    &-sidebar {
+        flex: 1;
+        display: flex;
+        height: fit-content;
+        flex-direction: column;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+
+        &-user {
+            padding: 16px;
+            border-bottom: 1px solid #ddd;
+
+            span {
+
+            }
+        }
+
+        a {
+            display: block;
+            padding: 16px;
+            color: var(--color-black);
+        }
+
+        a.active {
+            color: var(--color-primary-dark);
+            background-color: var(--color-accent-light);
+        }
+    }
+
+    &-content {
+        flex: 4;
+        color: var(--color-black);
+    }
+}
+
+.account-orders {
+    margin: 10px 0;
+    width: 100%;
+    border-spacing: 20px;
+
+    thead td {
+        font-weight: bold;
+    }
+}
+
+.table {
+    width: 100%;
+    margin: 10px 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid var(--color-gray-dark);
+
+    tbody tr {
+        border-bottom: 1px solid var(--color-gray-dark);
+
+        td {
+            padding: 10px;
+            border-right: 1px solid var(--color-gray-dark);
+
+            &:last-child {
+                border-right: none;
+            }
+
+            a {
+                font-weight: 600;
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    tfoot tr {
+        td {
+            padding: 10px;
+            border-right: 1px solid var(--color-gray-dark);
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+}

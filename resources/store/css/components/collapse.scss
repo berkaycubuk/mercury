@@ -1,0 +1,19 @@
+.collapse {
+    display: flex;
+    flex-direction: column;
+
+    &-head {
+        &-toggle {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+        }
+    }
+
+    &-body {
+
+    }
+}

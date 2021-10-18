@@ -1,0 +1,167 @@
+.online-order {
+    color: var(--color-black);
+    margin-top: 70px;
+
+    h1 {
+        font-size: 3.2rem;
+
+        @include breakpoint(max) {
+            font-size: 3rem;
+        }
+
+        @include breakpoint(xl) {
+            font-size: 2.8rem;
+        }
+
+        @include breakpoint(lg) {
+            font-size: 2.4rem;
+        }
+    }
+
+    p {
+        font-size: 24px;
+
+        @include breakpoint(max) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &-products {
+        margin-top: 70px;
+
+        h2 {
+            font-size: 40px;
+
+            @include breakpoint(max) {
+                font-size: 30px;
+            }
+        }
+
+        &-slider {
+            margin-top: 60px;
+
+            .splide__pagination {
+                bottom: -80px;
+
+                &__page {
+                    width: 16px;
+                    height: 16px;
+                    background: var(--color-accent);
+                    transition: all 0.3s ease-in-out;
+
+                    &.is-active {
+                        background: var(--color-primary);
+                        transform: none;
+                        width: 50px;
+                        border-radius: 20px;
+                    }
+                }
+            }
+
+            .splide__slide {
+                padding: 20px;
+            }
+
+            @include breakpoint(max) {
+                margin-top: 30px;
+
+                .splide__slide {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    &-categories {
+        margin-bottom: 200px;
+
+        .splide__pagination {
+            bottom: -80px;
+
+            &__page {
+                width: 16px;
+                height: 16px;
+                background: var(--color-accent);
+                transition: all 0.3s ease-in-out;
+
+                &.is-active {
+                    background: var(--color-primary);
+                    transform: none;
+                    width: 50px;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .splide__slide {
+            padding: 20px;
+        }
+
+        @include breakpoint(max) {
+            margin-top: 30px;
+
+            .splide__slide {
+                padding: 10px;
+            }
+        }
+    }
+
+    &-category {
+        display: block;
+        // width: calc((100% - 60px) / 4);
+        height: 600px;
+        position: relative;
+        background-color: var(--color-gray-light);
+
+        h3 {
+            font-size: 2rem;
+            color: $color-white;
+            position: absolute;
+            left: 40px;
+            top: 100px;
+            z-index: 99;
+            text-shadow: 2px 2px rgba(0,0,0,0.2);
+            transition: font-size 0.2s;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.2);
+            transition: background-color 0.2s;
+        }
+
+        @include breakpoint(max) {
+            height: 500px;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        &:hover {
+            h3 {
+                font-size: 2.2rem;
+            }
+
+            @include breakpoint(max) {
+                h3 {
+                    font-size: 1.7rem;
+                }
+            }
+
+            .online-order-category-effect {
+                background-color: rgba(0,0,0,0.4);
+            }
+        }
+    }
+}

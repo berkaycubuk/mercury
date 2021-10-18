@@ -1,0 +1,30 @@
+.container {
+    max-width: $screen-max;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: $screen-max) {
+    .container {
+        max-width: $screen-xl;
+    }
+}
+
+@media screen and (max-width: $screen-xl) {
+    .container {
+        max-width: $screen-lg;
+    }
+}
+
+@media screen and (max-width: $screen-lg) {
+    .container {
+        width: calc(100% - 20px);
+        max-width: $screen-md;
+    }
+}
+
+@media screen and (max-width: $screen-md) {
+    .container {
+        max-width: $screen-sm;
+    }
+}

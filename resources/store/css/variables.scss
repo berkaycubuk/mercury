@@ -1,0 +1,70 @@
+$color-primary-darker: #5f5344 !default;
+$color-primary-dark: #7d6c59 !default;
+$color-primary: #99856E !default;
+$color-primary-light: #af9f8e !default;
+$color-primary-lighter: #c4b8ab !default;
+
+$color-accent-darker: #44515f !default;
+$color-accent-dark:	#596a7d !default;
+$color-accent: #ece3d8 !default;
+$color-accent-light: #f5f0ea !default;
+$color-accent-lighter: #f5f0ea !default;
+
+$color-black: #1c1c21 !default;
+$color-black-light: #5e5e6e !default;
+$color-white: #ffffff !default;
+
+$color-gray-light: #F7F7F7 !default;
+$color-gray-dark: #A2A2A2 !default;
+$color-secondary: #ece3d8 !default;
+
+$color-red: #e64343 !default;
+
+$screen-max: 1600px;
+$screen-xl: 1200px;
+$screen-lg: 992px;
+$screen-md: 768px;
+$screen-sm: 576px;
+$screen-xs: 400px;
+
+$header-height: 100px;
+
+$transition: .2s;
+
+:root {
+    --color-primary-dark: #{$color-primary-dark};
+    --color-primary-darker: #{$color-primary-darker};
+    --color-primary: #{$color-primary};
+    --color-primary-light: #{$color-primary-light};
+    --color-primary-lighter: #{$color-primary-lighter};
+
+    --color-accent-dark: #{$color-accent-dark};
+    --color-accent-darker: #{$color-accent-darker};
+    --color-accent: #{$color-accent};
+    --color-accent-light: #{$color-accent-light};
+    --color-accent-lighter: #{$color-accent-lighter};
+
+    --color-black: #{$color-black};
+    --color-black-light: #{$color-black-light};
+    --color-white: #{$color-white};
+
+    --color-gray-light: #{$color-gray-light};
+    --color-gray-dark: #{$color-gray-dark};
+
+    --color-red: #{$color-red};
+
+    // special variables
+    --color-bg: #{$color-white};
+    --color-btn-primary-text: #{$color-white};
+    --color-slide-text: #{$color-white};
+}
+
+// Darkmode
+[data-theme="dark"] {
+    --color-black: #{$color-white};
+    --color-white: #{$color-black};
+    --color-gray-light: #27272a;
+
+    // special variables
+    --color-bg: #{$color-black};
+}
